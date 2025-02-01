@@ -16,7 +16,7 @@ plugins {
     // Kotlin support
     kotlin("jvm")
     // Gradle IntelliJ Plugin
-    id("org.jetbrains.intellij.platform") version "2.1.0"
+    id("org.jetbrains.intellij.platform") version "2.2.1"
     // Gradle Changelog Plugin
     id("org.jetbrains.changelog") version "2.2.1"
 }
@@ -35,7 +35,7 @@ dependencies {
     api(projects.helmValuesShared) {
         exclude(module = "slf4j-api")
     }
-    api("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.1")
+    api("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2")
     intellijPlatform {
         intellijIdeaCommunity(intellijPlatformVersion)
         instrumentationTools()
@@ -43,7 +43,7 @@ dependencies {
         zipSigner()
         testFramework(Platform)
     }
-    testImplementation("io.mockk:mockk:1.13.13")
+    testImplementation("io.mockk:mockk:1.13.16")
     testImplementation("junit:junit:4.13.2")
     testImplementation(projects.helmValuesTest) {
         exclude("junit-jupiter-api")

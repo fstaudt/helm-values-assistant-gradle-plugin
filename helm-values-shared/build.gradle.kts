@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.dokka") version "1.9.20"
+    id("org.jetbrains.dokka") version "2.0.0"
     `maven-publish`
     signing
 }
@@ -12,9 +12,9 @@ kotlin {
 dependencies {
     api("org.apache.httpcomponents.client5:httpclient5:5.4.1")
     api("org.apache.commons:commons-compress:1.27.1")
-    api("com.fasterxml.jackson.core:jackson-databind:2.18.1")
-    api("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.1")
-    api("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.1")
+    api("com.fasterxml.jackson.core:jackson-databind:2.18.2")
+    api("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.2")
+    api("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.2")
     api("com.github.java-json-tools:json-patch:1.13")
     testImplementation(projects.helmValuesTest)
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
